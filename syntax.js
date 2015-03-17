@@ -20,6 +20,11 @@ goog.provide('jsaction.TagName');
 goog.provide('jsaction.Tick');
 goog.provide('jsaction.UrlParam');
 
+/**
+ * @define {string} Whether to do generic event tracking based on the
+ *     'oi' attribute on action targets or their parent nodes.
+ */
+goog.define('jsaction.JSACTION_ATTRIBUTE', 'jsaction');
 
 /**
  * All attributes used by jsaction.
@@ -41,7 +46,7 @@ jsaction.Attribute = {
    *
    * Used by EventContract.
    */
-  JSACTION: 'jsaction',
+  JSACTION: jsaction.JSACTION_ATTRIBUTE,
 
   /**
    * The jsnamespace attribute provides the namespace part of the
